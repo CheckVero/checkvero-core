@@ -1,0 +1,9 @@
+{
+  "canisters": {
+    "checkvero_backend": {
+      "main": "src/checkvero_backend/main.mo",
+      "type": "motoko"
+    }
+  },
+  "version": 1
+}
