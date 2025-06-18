@@ -1,6 +1,7 @@
 import Array "mo:base/Array";
 
 actor CheckVero {
+
   stable var fraudReports : [Text] = [];
 
   public query func greet(name : Text) : async Text {
