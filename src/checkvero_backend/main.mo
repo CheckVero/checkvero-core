@@ -1,3 +1,4 @@
+// Prototype v0.1 — initially built and validated on ICP Ninja
 import Array "mo:base/Array";
 
 actor CheckVero {
