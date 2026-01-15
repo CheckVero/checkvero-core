@@ -1,180 +1,61 @@
 # Check Vero — Core (Exploratory)
 
-This repository contains exploratory core components of the Check Vero trust layer.
+⚠️ Exploratory repository
 
-It does not represent the full production system.
-No personal data, call content, or customer integrations are included.
+This repository contains **exploratory core components** of the Check Vero verification layer.
+It does **not** represent the production system.
 
-Check Vero is an enterprise-grade verification platform focused on call authentication and trust-before-answer.
-
-
-# ✅ Check Vero – The AI-native Trust Layer for Digital Communication
-
-![Built on ICP](https://img.shields.io/badge/Built_on-ICP-blueviolet)
-![Hackathon Submission](https://img.shields.io/badge/DoraHacks_x_DFINITY-orange)
-![Live on Fleek](https://img.shields.io/badge/Live_on-Fleek-brightgreen)
-
-**Check Vero** is a decentralized verification protocol for real-time communication – starting with phone calls.
-
-In a world of AI voice scams and deepfake messages, Check Vero verifies the **signal**, not just the sender.
+No personal data, call content, credentials, customer configurations, or live integrations are included.
 
 ---
 
-## 🔍 Use Case
+## What is Check Vero?
 
-– Real-time caller verification (banks, governments, platforms)  
-– AI-assisted risk & intent analysis  
-– Signal-staking via the $VERO token  
-– Originally submitted as a 15K DFINITY grant proposal (not awarded)  
-– Now reapplying for 25K with improved MVP and real-world validation  
-– Pilot commitment secured with Dutch bank (Australia branch): customers will receive email invitation to test the app  
-– Public subsidy in preparation via awareness programs in both the Netherlands 🇳🇱 and Australia 🇦🇺
+Check Vero is an enterprise-grade **verification layer for digital communication**, starting with phone calls.
 
----
+As AI voice, spoofing and impersonation scale, trust can no longer rely on labels or branding alone.
+Check Vero focuses on **verifying the authenticity of a communication event itself**.
 
-## 🧱 Built on Internet Computer (ICP)
-
-– ✅ Modular canister-based architecture  
-– ✅ Plug Wallet integration (used in early PoC)  
-– ✅ Oisy Wallet integration planned for production  
-– ✅ Internet Identity compatible  
-– ✅ Fully open-source and trustless by design
+Core principle:
+**trust-before-answer**
 
 ---
 
-## 📦 MVP Features (Hackathon Scope)
+## Scope of this repository
 
-| Feature                        | Status         | Notes                                                                 |
-|-------------------------------|----------------|-----------------------------------------------------------------------|
-| Caller ID Canister (Motoko)   | ✅ Previously tested | Built & tested in early version; re-deploying in Q3               |
-| Plug Wallet Auth              | 🧪 Demo ready   | Functional in mockup (PoC); production version will use Oisy Wallet |
-| Shield UI (Web)               | 🧪 Designed     | Front-end mockup complete (v0.1)                                     |
-| Reputation Logic              | 🔜 Planned      | Trust scoring based on signal context & caller type                 |
-| DAO Architecture (v0.1)       | ✅ Documented   | Legal & governance structure defined (see PDF)                       |
-| AI-Intent Scoring (Demo)      | 🔜 Planned      | Early-phase intent detection concept via metadata                    |
+This repository demonstrates:
+- Core verification concepts for call authenticity
+- Event-level validation logic
+- Exploratory architecture using ICP canisters (Motoko)
 
----
-
-## 📜 Background
-
-A previous DFINITY grant application (15K tier) was submitted with a full milestone plan.  
-Although not selected (likely due to tier fit), we’ve since refined the project and are reapplying for the **25K tier** with a sharper technical focus.
-
-This submission represents a mission-driven prototype — combining:
-
-– Clear technical architecture  
-– A working brand + ecosystem vision  
-– Real-world pilot alignment
+Out of scope:
+- Production deployments
+- Customer or carrier integrations
+- Commercial features or pricing
+- Compliance, policy or regulatory implementations
 
 ---
 
-## 📽️ Demo
+## Technology
 
-🎬 [Watch our 1-min explainer video](https://youtu.be/t5GM6bhTZuA)
-
----
-
-## 🧪 Tech Stack
-
-– Motoko / ICP Canisters  
-– Plug Wallet (early PoC)  
-– Oisy Wallet (planned)  
-– Web (Shield UI)  
-– Figma (UX/UI)  
-– GitHub Pages / Webhash (frontend)
+- Internet Computer (ICP)
+- Motoko canisters
+- Identity-compatible architecture
+- Designed for cryptographic verification and auditability
 
 ---
 
-## 🌐 Links
+## Demo
 
-– Mission: [https://checkvero.org](https://checkvero.org)  
-– Business Tools: [https://checkvero.com](https://checkvero.com)
+A limited technical demo exists for demonstration and validation purposes only.
 
----
-
-## 🔗 Live Demo
-
-🎥 [Try the live ICP demo here](https://www.checkvero.com)
-
-This project runs live on ICP with a functional demo for verifying trusted caller signals.
+👉 For current status, pilots or enterprise discussions:
+https://checkvero.org
 
 ---
 
-## 👥 Team
+## Status
 
-- **Marceo** – Founder, Product Lead  
-- **Julia** – Strategic & Legal Advisor  
-📬 Reach us at: [hello@checkvero.org](mailto:hello@checkvero.org)
+This repository is maintained for **technical exploration and reference**.
 
----
-
-## 🧪 Local Dev
-
-You can run this project locally with the ICP SDK:
-
-```bash
-dfx start --background
-dfx deploy
-
----
-
-## ✅ ICP Demo MVP (Hackathon Submission)
-
-This is a minimal Motoko-based demo of the Check Vero verification system.
-
-### 📦 Features
-
-- Real-time phone number verification via Motoko backend  
-- Hardcoded responses for demo numbers  
-- Simple HTML/JS frontend  
-- ICP-native: deployable via Fleek or DFX
-
----
-
-### 📱 Test Numbers
-
-| Phone Number     | Result            |
-|------------------|-------------------|
-| `+31612345678`   | ✅ Acme Bank       |
-| `+61298765432`   | ✅ Gov Australia   |
-| _Any other_      | ❌ Not registered |
-
----
-
-### 🚀 Deploy Instructions
-
-To deploy this MVP via [Fleek](https://fleek.xyz):
-
-1. Upload this repo to GitHub (or fork it)
-2. Connect the repo to Fleek
-3. Use the following deploy settings:
-
-| Setting            | Value                    |
-|--------------------|--------------------------|
-| **Branch**         | `main`                   |
-| **Framework**      | `Other`                  |
-| **Publish directory** | `src/check_vero_frontend` |
-| **Build command**  | *(leave empty)*          |
-
----
-
-Once deployed, your dApp will run live on ICP.
-
----
-
-## 🛠️ MVP Technical Overview (Hackathon Submission)
-
-This MVP simulates real-time phone number verification using a Motoko backend + HTML frontend.
-
-**Structure**
-- `main.mo`: Motoko backend that verifies known phone numbers (2 entries + fallback warning)
-- `index.html`: Simple UI with input field and `verify` button
-- Uses `Oisy Wallet` (planned) for identity-based access
-
-**Frontend Preview**
-- [✅ checkvero.com](https://checkvero.com)
-- Hosted via Fleek on Internet Computer Protocol
-
-**Deployment**
-- `dfx.json` defines frontend/backend structure
-- Fleek auto-deploy from GitHub (via `/src/check_vero_frontend` as publish path)
+Production systems, pilots and integrations are developed and operated in private environments.
