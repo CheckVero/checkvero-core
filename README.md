@@ -1,3 +1,13 @@
+# Check Vero — Core (Exploratory)
+
+This repository contains exploratory core components of the Check Vero trust layer.
+
+It does not represent the full production system.
+No personal data, call content, or customer integrations are included.
+
+Check Vero is an enterprise-grade verification platform focused on call authentication and trust-before-answer.
+
+
 # ✅ Check Vero – The AI-native Trust Layer for Digital Communication
 
 ![Built on ICP](https://img.shields.io/badge/Built_on-ICP-blueviolet)
